@@ -1,0 +1,67 @@
+<!-- Når jeg validerte koden fikk jeg 22 feil (17 røde error og 5 gule warnings) -->
+
+<!-- Her retter jeg opp i:"Error: Start tag seen without seeing a doctype first. Expected <!DOCTYPE html>. ved å legge til <!DOCTYPE html> -->  
+<!DOCTYPE html>
+<!-- Her retter jeg opp i: "Warning: Consider adding a lang attribute to the html start tag to declare the language of this document." ved å legge til <html lang = "nb">  -->
+<html lang = "nb">
+    <!-- Her retter jeg opp i: "Error: Stray start tag head." Dvs. at feilen var at <body> begynte før <head> i dokumentet. Nå har jeg flyttet <body> ned til etter <head> -->
+    <head>
+        <!-- Her la jeg til kodelinjen <meta charset="UTF-8"> under <head> (denne feilen dukket ikke opp når jeg validerte koden) -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Her retter jeg opp i: "Error: Element head is missing a required instance of child element title." Dvs. at href="style.css manglet et gåseøyne " på slutten av linken. -->
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <title>Web eksamen del 1</title>
+    </head>
+    <body>
+        <!-- Her plasserte jeg <div id="main"> som blir mer semantisk riktig slik at jeg fikk opp de 3 containerene i midten på nettsiden (denne feilen dukket ikke opp når jeg validerte koden) -->
+        <div id="main">
+            <nav>
+                <!-- Her retter jeg opp i: "Warning: Consider using the h1 element as a top-level heading only" ved å endre til <P> -->
+                <p>Logo</p>
+                <!-- Her retter jeg opp i: "Error: Element li not allowed as child of element nav in this context." Derfor legger jeg til <ul> over, og <li> elementene innenfor/under <ul> -->
+                <ul>
+                    <li> <a href="#">Boatswain schooner</a></li>
+                    <li> <a href="#">Account lookout</a></li>
+                    <li> <a href="#">Sail ho shrouds</a></li>
+                </ul>
+                
+            </nav>
+            <header>
+                <h1>Yar Pirate Ipsum</h1>
+                <p>Prow scuttle parrel provost Sail ho shrouds spirits boom mizzenmast yardarm. Pinnace holystone mizzenmast quarter crow's nest nipperkin grog yardarm hempen halter furl.</p>
+                <a class="button">Les mer</a>
+            </header>
+            <!-- Jeg la til <main> taggen som blir mer semantisk riktig slik at jeg fikk opp de 3 containerene i midten på nettsiden (denne feilen dukket ikke opp når jeg validerte koden) -->
+            <main>
+            <article>
+                <!-- Her retter jeg opp i: "Warning: Consider using the h1 element as a top-level heading only" ved å endre til <h2> -->
+                <h2>Prow scuttle</h2>
+                <p>Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors.</p>
+                <a href="#">Les mer</a>
+            <!-- Her retter jeg opp i: "Error: Unclosed element article." ved å legge til </article> -->    
+            </article>
+            <article>
+                <!-- Her retter jeg opp i: "Warning: Consider using the h1 element as a top-level heading only" ved å endre til <h2> -->
+                <h2>Jack Tar transom</h2>
+                <p>Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors.</p>
+                <a href="#">Les mer</a>
+            </article>
+            <article>
+                <!-- Her retter jeg opp i: "Warning: Consider using the h1 element as a top-level heading only" ved å endre til <h2> -->
+                <h2>Trysail Sail</h2>
+                <p>Deadlights jack lad schooner scallywag dance the hempen jig carouser broadside cable strike colors.</p>
+                <a href="#">Les mer</a>
+            </article>
+            <!-- Jeg la til </main> taggen som blir mer semantisk riktig slik at jeg fikk opp de 3 containerene i midten på nettsiden (denne feilen dukket ikke opp når jeg validerte koden) -->
+            </main>
+        
+            <footer>
+                <span>Twitter</span>
+                <span>Facebook</span>
+                <span>Instagram</span>
+            </footer>
+        <!-- Her plasserte jeg </div> taggen som blir mer semantisk riktig slik at jeg fikk opp de 3 containerene i midten på nettsiden (denne feilen dukket ikke opp når jeg validerte koden) -->    
+        </div>
+    </body>
+</html>
